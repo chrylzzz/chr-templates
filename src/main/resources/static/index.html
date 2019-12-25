@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/jquery-1.7.2.js"></script>
+</head>
+<body>
+<h1>index</h1>
+
+<input type="button" value="go1" id="go1">
+<input type="button" value="go2" id="go2">
+<input type="button" value="go-11" id="go-11">
+<input type="button" value="go-22" id="go-22">
+<script>
+    $(function () {
+
+
+    });
+    //前->后
+    $("#go1").on("click", function () {
+        $.get("/admin/ck1");
+    });
+    $("#go2").on("click", function () {
+        $.get("/admin/ck2");
+    });
+    //前->后->前
+    $("#go-11").on("click", function () {
+        window.open("/admin/ck11");
+    });
+    $("#go-22").on("click", function () {
+        window.open("/admin/ck22");
+    });
+</script>
+</body>
+</html>
